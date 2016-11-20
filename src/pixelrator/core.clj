@@ -1,10 +1,10 @@
 (ns pixelrator.core
-  (require [pixelrator.transformer :as t])
+  (require [pixelrator.transformer :as t]
+           [pixelrator.parser :as p])
   (:gen-class))
-
-(def colormap
-  {\a "343F35", \g "329E41"})
 
 (defn -main
   [& args]
-  (println (t/transform-row (first args) colormap)))
+  (let [file (p/parse (first args))
+        row (t/transform-row (first (file :pixels)) (file :colormap))]
+    (println row)))
