@@ -2,7 +2,9 @@
   (require [pixelrator.transformer :as t])
   (:gen-class))
 
+(def colormap
+  {\a "343F35", \g "329E41"})
+
 (defn -main
-  "I don't do a whole lot ... yet."
   [& args]
-  (println (t/transform-row (first args))))
+  (println (t/transform-row (first args) colormap)))
