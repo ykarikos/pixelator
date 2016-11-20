@@ -6,5 +6,5 @@
 (defn -main
   [& args]
   (let [file (p/parse (first args))
-        row (t/transform-row (first (file :pixels)) (file :colormap))]
-    (println row)))
+        output (t/transform (file :pixels) (file :colormap))]
+    (println output)))

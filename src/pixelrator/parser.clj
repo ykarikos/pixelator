@@ -11,6 +11,8 @@
   (let [lines (str/split-lines (slurp filename))
         colorcount (Integer. (first lines))
         colordata (take colorcount (rest lines))
-        pixeldata (drop colorcount (rest lines))]
+        pixeldata (drop colorcount (rest lines))
+        indices (range (count pixeldata))
+        indexed-pixeldata (zipmap indices pixeldata)]
     {:colormap (reduce parse-colormap {} colordata)
-     :pixels pixeldata}))
+     :pixels indexed-pixeldata}))

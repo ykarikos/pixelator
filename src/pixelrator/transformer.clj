@@ -14,8 +14,12 @@
   (let [pixel (to-svg x y (colormap color))]
     (str init pixel)))
 
-(defn transform-row
-  [row colormap]
+(defn- transform-row
+  [colormap init rownum row]
   (let [indices (range (count row))
         rowzip (zipmap indices row)]
-    (reduce-kv (partial transform-pixel 1 colormap) "" rowzip)))
+    (reduce-kv (partial transform-pixel rownum colormap) init rowzip)))
+
+(defn transform
+  [pixeldata colormap]
+  (reduce-kv (partial transform-row colormap) "" pixeldata))
