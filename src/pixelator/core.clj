@@ -1,6 +1,6 @@
-(ns pixelrator.core
-  (require [pixelrator.transformer :as t]
-           [pixelrator.parser :as p])
+(ns pixelator.core
+  (require [pixelator.transformer :as t]
+           [pixelator.parser :as p])
   (:gen-class))
 
 (defn- svg-prologue

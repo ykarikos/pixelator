@@ -1,0 +1,7 @@
+4
+g 00C000 green
+b 0000C0 blue
+r C00000 red
+d C1C1C1 dark gray
+g b
+ r d

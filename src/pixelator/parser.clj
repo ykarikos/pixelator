@@ -1,4 +1,4 @@
-(ns pixelrator.parser
+(ns pixelator.parser
   (require [clojure.string :as str]))
 
 (defn- parse-colormap

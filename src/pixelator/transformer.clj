@@ -1,4 +1,4 @@
-(ns pixelrator.transformer)
+(ns pixelator.transformer)
 
 (defn- to-svg
   [x y color]
