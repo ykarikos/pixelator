@@ -6,7 +6,7 @@
     (str "<rect x=\"" x
       "\" y=\"" y
       "\" fill=\"#" color
-      "\" width=\"1\" height=\"1\"/>\n")
+      "\" width=\"1.01\" height=\"1.01\"/>\n")
     ""))
 
 (defn- transform-pixel
