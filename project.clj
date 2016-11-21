@@ -1,8 +1,7 @@
 (defproject pixelrator "0.1.0-SNAPSHOT"
-  :description "FIXME: write description"
-  :url "http://example.com/FIXME"
-  :license {:name "Eclipse Public License"
-            :url "http://www.eclipse.org/legal/epl-v10.html"}
+  :description "Create pixelated svg image out of a text file"
+  :license {:name "MIT"
+            :url "https://github.com/ykarikos/pixelator/blob/master/LICENSE"}
   :dependencies [[org.clojure/clojure "1.7.0"]]
   :main ^:skip-aot pixelrator.core
   :target-path "target/%s"
